@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournament Bracket</title>
+  <link rel="stylesheet" href="bracket.css"> <!-- Vincula el archivo CSS -->
+</head>
+<body>
+  <div class="tournament-brackets">
+    <div class="bracket">
+      <template v-for="(round, index) in rounds">
+        <div class="round" :key="index" :class="['round-' + round]">
+          <template v-for="(match, matchIndex) in round">
+            <div class="match" :key="matchIndex">
+              <div class="match__content" :style="matchStyle"></div>
+            </div>
+          </template>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <script src="bracket.js"></script> <!-- Vincula el archivo JS -->
+</body>
+</html>
