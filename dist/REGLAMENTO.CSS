@@ -1,0 +1,146 @@
+/* Ajustar la base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+#FULLNGATT {
+  background: #f6f6f6; 
+  border: 1px solid #ddd; 
+  width: 90%; /* Cambiado de fijo a porcentaje */
+  max-width: 500px; /* Máximo para pantallas grandes */
+  margin: 0 auto; /* Centrado en la pantalla */
+  padding-bottom: 3px;
+}
+
+#FULLNGATT .headerngin {
+  width: 100%; /* Se adapta al contenedor */
+  padding: 15px; 
+  background: #004274; 
+  border: 1px solid #004274;
+  font-size: 1.4rem; /* Tamaño adaptable */
+  color: #fafafa;
+  text-transform: uppercase;
+  font-family: Anton;
+  letter-spacing: 0.3rem;
+  margin-bottom: 3px;
+  text-align: center; /* Centrar el texto */
+}
+
+#FULLNGATT .headerngin i {
+  margin: 8px;
+}
+
+#FULLNGATT .unongin, 
+#FULLNGATT .dosngin, 
+#FULLNGATT .tresngin {
+  height: 15px; 
+  flex: 1; /* Ajusta automáticamente su tamaño */
+}
+
+#FULLNGATT table {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#FULLNGATT .unongin {
+  background: #00008B; /* Azul oscuro */
+}
+
+#FULLNGATT .dosngin {
+  background: #FF0000; /* Rojo brillante */
+}
+
+#FULLNGATT .tresngin {
+  background: #00008B; /* Azul oscuro */
+}
+
+
+#FULLNGATT .titulo1ngin {
+  background: #ededed;
+  border: 1px auto #ddd;
+  margin: 15px auto;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 1rem; /* Adaptable */
+  font-family: Anton;
+  letter-spacing: 0.4rem;
+  color: #8c8c8c;
+  text-align: center; /* Centrar el texto */
+}
+
+#FULLNGATT .bodyngin {
+  background: #f6f6f6; 
+  width: 100%; 
+  border: 1px solid #ddd; 
+  padding: 10px;
+  font-family: Montserrat;
+  font-size: 0.9rem; /* Adaptable */
+  text-align: justify;
+}
+
+#FULLNGATT .bodyngin span {
+  padding: 1px; 
+  font-size: 0.9rem; /* Adaptable */
+  font-family: Anton;
+  color: #fc8f8c;
+}
+
+#FULLNGATT .bodyngin a {
+  text-decoration: none;
+  color: black;
+}
+
+#FULLNGATT .bodyngin a:hover {
+  color: #fc8f8c;
+}
+
+#FULLNGATT .titulo2ngin {
+  padding: 2px; 
+  font-size: 0.8rem; /* Adaptable */
+  font-family: Anton; 
+  letter-spacing: 0.1rem; 
+  color: #8C8C8C; 
+  text-transform: uppercase; 
+  background: #ededed; 
+  border: 1px solid #ddd; 
+  margin: 5px auto; 
+  height: auto;
+  text-align: center;
+}
+
+#FULLNGATT .indicetitlengin {
+  background: #edbc92; 
+  border: 1px solid #ddd; 
+  margin: 5px auto; 
+  text-transform: uppercase; 
+  padding: 5px; 
+  font-size: 1rem; /* Adaptable */
+  font-family: Anton; 
+  letter-spacing: 0.3rem; 
+  text-align: center; 
+  color: #fafafa;
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 600px) {
+  #FULLNGATT {
+    width: 95%; /* Aumenta el margen en dispositivos pequeños */
+  }
+
+  #FULLNGATT .headerngin {
+    font-size: 1.2rem;
+  }
+
+  #FULLNGATT .bodyngin {
+    font-size: 0.8rem;
+  }
+
+  #FULLNGATT .titulo1ngin, 
+  #FULLNGATT .indicetitlengin {
+    font-size: 0.9rem;
+  }
+}
