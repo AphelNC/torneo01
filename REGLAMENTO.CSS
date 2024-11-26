@@ -1,42 +1,48 @@
-/* Ajustar la base */
+/* Asegura que la fuente de la página sea consistente */
 body, html {
   margin: 0;
   padding: 0;
   font-size: 100%;
   box-sizing: border-box;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif; /* Fuente de respaldo */
 }
 
+/* Contenedor principal */
 #FULLNGATT {
-  background: #f6f6f6; 
-  border: 1px solid #ddd; 
+  background: #f6f6f6;
+  border: 1px solid #ddd;
   width: 90%; /* Cambiado de fijo a porcentaje */
-  max-width: 500px; /* Máximo para pantallas grandes */
+  max-width: 600px; /* Aumentado el máximo para pantallas grandes */
   margin: 0 auto; /* Centrado en la pantalla */
-  padding-bottom: 3px;
+  padding-bottom: 20px; /* Mayor espaciado en el fondo */
 }
 
+/* Cabecera */
 #FULLNGATT .headerngin {
   width: 100%; /* Se adapta al contenedor */
-  padding: 15px; 
-  background: #004274; 
+  padding: 15px;
+  background: #004274;
   border: 1px solid #004274;
   font-size: 1.4rem; /* Tamaño adaptable */
   color: #fafafa;
   text-transform: uppercase;
-  font-family: Anton;
+  font-family: 'Anton', sans-serif;
   letter-spacing: 0.3rem;
-  margin-bottom: 3px;
-  text-align: center; /* Centrar el texto */
+  margin-bottom: 15px; /* Más espacio debajo */
+  text-align: center;
 }
 
+/* Icono en el encabezado */
 #FULLNGATT .headerngin i {
   margin: 8px;
 }
 
+/* Contenedor de las celdas (unongin, dosngin, tresngin) */
 #FULLNGATT .unongin, 
 #FULLNGATT .dosngin, 
 #FULLNGATT .tresngin {
-  height: 15px; 
+  height: 25px; /* Aumentado el tamaño de las celdas */
   flex: 1; /* Ajusta automáticamente su tamaño */
 }
 
@@ -46,6 +52,7 @@ body, html {
   justify-content: space-between;
 }
 
+/* Colores de las celdas */
 #FULLNGATT .unongin {
   background: #00008B; /* Azul oscuro */
 }
@@ -58,37 +65,40 @@ body, html {
   background: #00008B; /* Azul oscuro */
 }
 
-
+/* Título principal */
 #FULLNGATT .titulo1ngin {
   background: #ededed;
-  border: 1px auto #ddd;
-  margin: 15px auto;
+  border: 1px solid #ddd;
+  margin: 20px auto;
   text-transform: uppercase;
   padding: 10px;
-  font-size: 1rem; /* Adaptable */
-  font-family: Anton;
+  font-size: 1.2rem; /* Adaptable */
+  font-family: 'Anton', sans-serif;
   letter-spacing: 0.4rem;
   color: #8c8c8c;
-  text-align: center; /* Centrar el texto */
+  text-align: center;
 }
 
+/* Contenido del reglamento */
 #FULLNGATT .bodyngin {
-  background: #f6f6f6; 
-  width: 100%; 
-  border: 1px solid #ddd; 
-  padding: 10px;
-  font-family: Montserrat;
-  font-size: 0.9rem; /* Adaptable */
+  background: #f6f6f6;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem; /* Ajustado para mejor lectura */
   text-align: justify;
 }
 
+/* Estilo de las secciones de reglas */
 #FULLNGATT .bodyngin span {
-  padding: 1px; 
-  font-size: 0.9rem; /* Adaptable */
-  font-family: Anton;
+  padding: 2px;
+  font-size: 1rem; /* Ajustado para ser más visible */
+  font-family: 'Anton', sans-serif;
   color: #fc8f8c;
 }
 
+/* Enlaces dentro del reglamento */
 #FULLNGATT .bodyngin a {
   text-decoration: none;
   color: black;
@@ -98,31 +108,37 @@ body, html {
   color: #fc8f8c;
 }
 
+/* Título secundario */
 #FULLNGATT .titulo2ngin {
-  padding: 2px; 
-  font-size: 0.8rem; /* Adaptable */
-  font-family: Anton; 
-  letter-spacing: 0.1rem; 
-  color: #8C8C8C; 
-  text-transform: uppercase; 
-  background: #ededed; 
-  border: 1px solid #ddd; 
-  margin: 5px auto; 
-  height: auto;
+  padding: 2px;
+  font-size: 0.9rem; /* Adaptable */
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.1rem;
+  color: #8C8C8C;
+  text-transform: uppercase;
+  background: #ededed;
+  border: 1px solid #ddd;
+  margin: 5px auto;
   text-align: center;
 }
 
+/* Botón de regresar */
 #FULLNGATT .indicetitlengin {
-  background: #edbc92; 
-  border: 1px solid #ddd; 
-  margin: 5px auto; 
-  text-transform: uppercase; 
-  padding: 5px; 
-  font-size: 1rem; /* Adaptable */
-  font-family: Anton; 
-  letter-spacing: 0.3rem; 
-  text-align: center; 
+  background: #edbc92;
+  border: 1px solid #ddd;
+  margin: 20px auto;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 1rem;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.3rem;
+  text-align: center;
   color: #fafafa;
+  cursor: pointer;
+}
+
+#FULLNGATT .indicetitlengin:hover {
+  background-color: #d49c6a;
 }
 
 /* Media Queries para dispositivos pequeños */
@@ -132,15 +148,51 @@ body, html {
   }
 
   #FULLNGATT .headerngin {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Reducción de tamaño */
   }
 
   #FULLNGATT .bodyngin {
-    font-size: 0.8rem;
+    font-size: 0.9rem; /* Reducción de tamaño */
   }
 
   #FULLNGATT .titulo1ngin, 
   #FULLNGATT .indicetitlengin {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+
+  #FULLNGATT .unongin,
+  #FULLNGATT .dosngin,
+  #FULLNGATT .tresngin {
+    height: 30px; /* Ajuste de tamaño */
+  }
+
+  #FULLNGATT .titulo2ngin {
+    font-size: 0.85rem; /* Ajuste en pantallas pequeñas */
+  }
+}
+
+/* Media Queries para dispositivos de mayor tamaño */
+@media (min-width: 600px) and (max-width: 1024px) {
+  #FULLNGATT {
+    width: 90%; /* Ajuste para pantallas medianas */
+  }
+
+  #FULLNGATT .headerngin {
+    font-size: 1.3rem;
+  }
+
+  #FULLNGATT .bodyngin {
+    font-size: 1rem;
+  }
+
+  #FULLNGATT .titulo1ngin, 
+  #FULLNGATT .indicetitlengin {
+    font-size: 1.1rem;
+  }
+
+  #FULLNGATT .unongin,
+  #FULLNGATT .dosngin,
+  #FULLNGATT .tresngin {
+    height: 25px;
   }
 }
