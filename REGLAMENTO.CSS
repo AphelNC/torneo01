@@ -1,58 +1,41 @@
-/* Asegura que la fuente de la página sea consistente */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  box-sizing: border-box;
-  height: 100%;
-  font-family: 'Montserrat', sans-serif; /* Fuente de respaldo */
-}
-
-/* Contenedor principal */
+/* General Styles */
 #FULLNGATT {
-  background: #f6f6f6;
-  border: 1px solid #ddd;
-  width: 90%; /* Cambiado de fijo a porcentaje */
-  max-width: 600px; /* Aumentado el máximo para pantallas grandes */
-  margin: 0 auto; /* Centrado en la pantalla */
-  padding-bottom: 20px; /* Mayor espaciado en el fondo */
+  background: #f6f6f6; 
+  border: 1px solid #ddd; 
+  width: 100%; /* Use 100% width for responsiveness */
+  max-width: 506px; /* Set a maximum width for large screens */
+  height: auto; 
+  padding-bottom: 3px; 
+  display: block;
+  margin: 0 auto; /* Center the container */
 }
 
-/* Cabecera */
 #FULLNGATT .headerngin {
-  width: 100%; /* Se adapta al contenedor */
-  padding: 15px;
-  background: #004274;
+  width: 100%; /* Make header width 100% */
+  max-width: 475px; 
+  height: auto; 
+  padding: 15px; 
+  background: #004274; 
   border: 1px solid #004274;
-  font-size: 1.4rem; /* Tamaño adaptable */
+  font-size: 22px;
   color: #fafafa;
   text-transform: uppercase;
-  font-family: 'Anton', sans-serif;
-  letter-spacing: 0.3rem;
-  margin-bottom: 15px; /* Más espacio debajo */
-  text-align: center;
+  font-family: Anton;
+  letter-spacing: 5px;
+  margin-bottom: 3px;
 }
 
-/* Icono en el encabezado */
 #FULLNGATT .headerngin i {
   margin: 8px;
 }
 
-/* Contenedor de las celdas (unongin, dosngin, tresngin) */
 #FULLNGATT .unongin, 
 #FULLNGATT .dosngin, 
 #FULLNGATT .tresngin {
-  height: 25px; /* Aumentado el tamaño de las celdas */
-  flex: 1; /* Ajusta automáticamente su tamaño */
-}
+  height: 15px; 
+  width: 100px;
+} 
 
-#FULLNGATT table {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Colores de las celdas */
 #FULLNGATT .unongin {
   background: #00008B; /* Azul oscuro */
 }
@@ -65,134 +48,127 @@ body, html {
   background: #00008B; /* Azul oscuro */
 }
 
-/* Título principal */
 #FULLNGATT .titulo1ngin {
   background: #ededed;
   border: 1px solid #ddd;
-  margin: 20px auto;
+  margin: 15px;
   text-transform: uppercase;
   padding: 10px;
-  font-size: 1.2rem; /* Adaptable */
-  font-family: 'Anton', sans-serif;
-  letter-spacing: 0.4rem;
+  font-size: 14px;
+  font-family: Anton;
+  letter-spacing: 5px;
   color: #8c8c8c;
-  text-align: center;
+  margin-top: 3px;
 }
 
-/* Contenido del reglamento */
 #FULLNGATT .bodyngin {
-  background: #f6f6f6;
-  width: 100%;
-  border: 1px solid #ddd;
-  padding: 15px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem; /* Ajustado para mejor lectura */
+  background: #f6f6f6; 
+  width: 100%; 
+  max-width: 455px; /* Set max-width */
+  height: auto; 
+  border: 1px solid #ddd; 
+  padding: 10px;
+  font-family: Montserrat;
+  font-size: 12px;
   text-align: justify;
+  margin-bottom: 3px;
 }
 
-/* Estilo de las secciones de reglas */
 #FULLNGATT .bodyngin span {
-  padding: 2px;
-  font-size: 1rem; /* Ajustado para ser más visible */
-  font-family: 'Anton', sans-serif;
+  padding: 1px; 
+  font-size: 12px;
+  font-family: Anton;
   color: #fc8f8c;
 }
 
-/* Enlaces dentro del reglamento */
 #FULLNGATT .bodyngin a {
   text-decoration: none;
   color: black;
 }
 
+#FULLNGATT .bodyngin a:link {
+  color: black !important;
+}
+
+#FULLNGATT .bodyngin a:visited {
+  color: black !important;
+}
+
 #FULLNGATT .bodyngin a:hover {
-  color: #fc8f8c;
+  color: #fc8f8c !important;
 }
 
-/* Título secundario */
+#FULLNGATT .bodyngin a:active {
+  color: #fc8f8c !important;
+}
+
 #FULLNGATT .titulo2ngin {
-  padding: 2px;
-  font-size: 0.9rem; /* Adaptable */
-  font-family: 'Anton', sans-serif;
-  letter-spacing: 0.1rem;
-  color: #8C8C8C;
-  text-transform: uppercase;
-  background: #ededed;
-  border: 1px solid #ddd;
-  margin: 5px auto;
+  padding: 2px; 
+  font-size: 12px; 
+  font-family: Anton; 
+  letter-spacing: 2px; 
+  color: #8C8C8C; 
+  text-transform: uppercase; 
+  background: #ededed; 
+  border: 1px solid #ddd; 
+  margin: 5px; 
+  height: 20px; 
   text-align: center;
 }
 
-/* Botón de regresar */
 #FULLNGATT .indicetitlengin {
-  background: #edbc92;
-  border: 1px solid #ddd;
-  margin: 20px auto;
-  text-transform: uppercase;
-  padding: 10px;
-  font-size: 1rem;
-  font-family: 'Anton', sans-serif;
-  letter-spacing: 0.3rem;
-  text-align: center;
+  background: #edbc92; 
+  border: 1px solid #ddd; 
+  margin: 5px; 
+  text-transform: uppercase; 
+  padding: 5px; 
+  font-size: 14px; 
+  font-family: Anton; 
+  letter-spacing: 5px; 
+  text-align: center; 
   color: #fafafa;
-  cursor: pointer;
 }
 
-#FULLNGATT .indicetitlengin:hover {
-  background-color: #d49c6a;
-}
-
-/* Media Queries para dispositivos pequeños */
-@media (max-width: 600px) {
-  #FULLNGATT {
-    width: 95%; /* Aumenta el margen en dispositivos pequeños */
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #FULLNGATT .headerngin, 
+  #FULLNGATT .titulo1ngin, 
+  #FULLNGATT .bodyngin {
+      width: 95%; /* Adjust width for smaller screens */
+      padding: 10px; /* Reduce padding */
   }
 
-  #FULLNGATT .headerngin {
-    font-size: 1.2rem; /* Reducción de tamaño */
+  #FULLNGATT .titulo1ngin {
+      font-size: 13px; /* Smaller font size on smaller screens */
   }
 
   #FULLNGATT .bodyngin {
-    font-size: 0.9rem; /* Reducción de tamaño */
+      font-size: 11px; /* Smaller font size */
   }
 
-  #FULLNGATT .titulo1ngin, 
   #FULLNGATT .indicetitlengin {
-    font-size: 1rem;
+      font-size: 12px; /* Smaller font size for buttons */
+      padding: 8px; /* Adjust padding */
   }
 
-  #FULLNGATT .unongin,
-  #FULLNGATT .dosngin,
+  #FULLNGATT .unongin, 
+  #FULLNGATT .dosngin, 
   #FULLNGATT .tresngin {
-    height: 30px; /* Ajuste de tamaño */
-  }
-
-  #FULLNGATT .titulo2ngin {
-    font-size: 0.85rem; /* Ajuste en pantallas pequeñas */
+      width: 80px; /* Adjust width of colored bars */
   }
 }
 
-/* Media Queries para dispositivos de mayor tamaño */
-@media (min-width: 600px) and (max-width: 1024px) {
-  #FULLNGATT {
-    width: 90%; /* Ajuste para pantallas medianas */
-  }
-
+@media (max-width: 480px) {
   #FULLNGATT .headerngin {
-    font-size: 1.3rem;
+      font-size: 18px; /* Smaller font for smaller screens */
+      padding: 10px;
   }
 
   #FULLNGATT .bodyngin {
-    font-size: 1rem;
+      font-size: 10px; /* Smaller text for very small screens */
   }
 
-  #FULLNGATT .titulo1ngin, 
   #FULLNGATT .indicetitlengin {
-    font-size: 1.1rem;
-  }
-
-  #FULLNGATT .unongin,
-  #FULLNGATT .dosngin,
-  #FULLNGATT .tresngin {
-    height: 25px;
+      font-size: 10px; /* Smaller button text */
   }
 }
