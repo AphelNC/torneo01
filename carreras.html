@@ -1,168 +1,174 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Parallax 3D Cards Carousel  |  swiper.js</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Nabla:EHLT@24&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'><link rel="stylesheet" href="./style.css">
+/* General Styles */
+#FULLNGATT {
+  background: #f6f6f6; 
+  border: 1px solid #ddd; 
+  width: 100%; /* Use 100% width for responsiveness */
+  max-width: 506px; /* Set a maximum width for large screens */
+  height: auto; 
+  padding-bottom: 3px; 
+  display: block;
+  margin: 0 auto; /* Center the container */
+}
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<article>
+#FULLNGATT .headerngin {
+  width: 100%; /* Make header width 100% */
+  max-width: 475px; 
+  height: auto; 
+  padding: 15px; 
+  background: #004274; 
+  border: 1px solid #004274;
+  font-size: 22px;
+  color: #fafafa;
+  text-transform: uppercase;
+  font-family: Anton;
+  letter-spacing: 5px;
+  margin-bottom: 3px;
+}
 
-  <section class="sectionWrapper">
+#FULLNGATT .headerngin i {
+  margin: 8px;
+}
 
-    <section class="swiper">
+#FULLNGATT .unongin, 
+#FULLNGATT .dosngin, 
+#FULLNGATT .tresngin {
+  height: 15px; 
+  width: 100px;
+} 
 
-      <div class="parallax-bg" data-swiper-parallax="600" data-swiper-parallax-scale="0.85"></div>
+#FULLNGATT .unongin {
+  background: #00008B; /* Azul oscuro */
+}
 
-      <div class="swiper-wrapper">
+#FULLNGATT .dosngin {
+  background: #FF0000; /* Rojo brillante */
+}
 
-        <figure class="swiper-slide">
+#FULLNGATT .tresngin {
+  background: #00008B; /* Azul oscuro */
+}
 
-          <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
+#FULLNGATT .titulo1ngin {
+  background: #ededed;
+  border: 1px solid #ddd;
+  margin: 15px;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Anton;
+  letter-spacing: 5px;
+  color: #8c8c8c;
+  margin-top: 3px;
+}
 
-            <img src="./img/registro.png" alt="jellyfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+#FULLNGATT .bodyngin {
+  background: #f6f6f6; 
+  width: 100%; 
+  max-width: 455px; /* Set max-width */
+  height: auto; 
+  border: 1px solid #ddd; 
+  padding: 10px;
+  font-family: Montserrat;
+  font-size: 12px;
+  text-align: justify;
+  margin-bottom: 3px;
+}
 
+#FULLNGATT .bodyngin span {
+  padding: 1px; 
+  font-size: 12px;
+  font-family: Anton;
+  color: #fc8f8c;
+}
 
-          
-          </div>
+#FULLNGATT .bodyngin a {
+  text-decoration: none;
+  color: black;
+}
 
-        </figure>
+#FULLNGATT .bodyngin a:link {
+  color: black !important;
+}
 
-        <figure class="swiper-slide">
+#FULLNGATT .bodyngin a:visited {
+  color: black !important;
+}
 
-          <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
+#FULLNGATT .bodyngin a:hover {
+  color: #fc8f8c !important;
+}
 
-            <img src="./img/reglas.JPG" alt="clownfish" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
+#FULLNGATT .bodyngin a:active {
+  color: #fc8f8c !important;
+}
 
-            
-           
+#FULLNGATT .titulo2ngin {
+  padding: 2px; 
+  font-size: 12px; 
+  font-family: Anton; 
+  letter-spacing: 2px; 
+  color: #8C8C8C; 
+  text-transform: uppercase; 
+  background: #ededed; 
+  border: 1px solid #ddd; 
+  margin: 5px; 
+  height: 20px; 
+  text-align: center;
+}
 
-            <figcaption data-swiper-parallax="80" data-swiper-parallax-duration="1250">
+#FULLNGATT .indicetitlengin {
+  background: #edbc92; 
+  border: 1px solid #ddd; 
+  margin: 5px; 
+  text-transform: uppercase; 
+  padding: 5px; 
+  font-size: 14px; 
+  font-family: Anton; 
+  letter-spacing: 5px; 
+  text-align: center; 
+  color: #fafafa;
+}
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #FULLNGATT .headerngin, 
+  #FULLNGATT .titulo1ngin, 
+  #FULLNGATT .bodyngin {
+      width: 95%; /* Adjust width for smaller screens */
+      padding: 10px; /* Reduce padding */
+  }
 
-            </figcaption>
+  #FULLNGATT .titulo1ngin {
+      font-size: 13px; /* Smaller font size on smaller screens */
+  }
 
-            <a href="javascript:void(0);" title="Continue Reading" data-swiper-parallax="80" data-swiper-parallax-opacity="0.2" data-swiper-parallax-duration="1750">
-              <a href="reglamento.html">REGLAS</a>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-              </svg>
-            </a>
+  #FULLNGATT .bodyngin {
+      font-size: 11px; /* Smaller font size */
+  }
 
-          </div>
+  #FULLNGATT .indicetitlengin {
+      font-size: 12px; /* Smaller font size for buttons */
+      padding: 8px; /* Adjust padding */
+  }
 
-        </figure>
+  #FULLNGATT .unongin, 
+  #FULLNGATT .dosngin, 
+  #FULLNGATT .tresngin {
+      width: 80px; /* Adjust width of colored bars */
+  }
+}
 
-        <figure class="swiper-slide">
+@media (max-width: 480px) {
+  #FULLNGATT .headerngin {
+      font-size: 18px; /* Smaller font for smaller screens */
+      padding: 10px;
+  }
 
-          <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
+  #FULLNGATT .bodyngin {
+      font-size: 10px; /* Smaller text for very small screens */
+  }
 
-            <img src="./img/DESARROLLO SOFTWARE.png" alt="blue tang" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-
-            <h2 class="title" data-swiper-parallax="80" data-swiper-parallax-duration="1000">
-              REQUISITOS
-            </h2>
-
-            <h4 class="subtitle" data-swiper-parallax="80" data-swiper-parallax-duration="1500">
-  
-            </h4>
-
-            <figcaption data-swiper-parallax="80" data-swiper-parallax-duration="1250">
-
-            </figcaption>
-
-            <a href="javascript:void(0);" title="Continue Reading" data-swiper-parallax="80" data-swiper-parallax-opacity="0.2" data-swiper-parallax-duration="1750">
-              <a href="requisitos.html">REQUISITOS</a>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-              </svg>
-            </a>
-
-          </div>
-
-        </figure>
-
-  
-
-        <figure class="swiper-slide">
-
-          <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-
-            <img src="./img/DESARROLLO SOFTWARE.png" alt="blue tang" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-
-            <h2 class="title" data-swiper-parallax="80" data-swiper-parallax-duration="1000">
-              REGISTRO
-            </h2>
-
-            <h4 class="subtitle" data-swiper-parallax="80" data-swiper-parallax-duration="1500">
-  
-            </h4>
-
-            <figcaption data-swiper-parallax="80" data-swiper-parallax-duration="1250">
-
-            </figcaption>
-
-            <a href="javascript:void(0);" title="Continue Reading" data-swiper-parallax="80" data-swiper-parallax-opacity="0.2" data-swiper-parallax-duration="1750">
-              <a href="./carreras.html">REGISTRATE</a>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-              </svg>
-            </a>
-
-          </div>
-
-        </figure>
-
-        <figure class="swiper-slide">
-
-          <div class="cardPopout" data-swiper-parallax="30" data-swiper-parallax-scale="0.9" data-swiper-parallax-opacity="0.8" data-swiper-parallax-duration="1000">
-
-            <img src="./img/DESARROLLO SOFTWARE.png" alt="blue tang" width="800" height="400" data-swiper-parallax="80" data-swiper-parallax-duration="2000">
-
-            <h2 class="title" data-swiper-parallax="80" data-swiper-parallax-duration="1000">
-              ENCUENTROS
-            </h2>
-
-            <h4 class="subtitle" data-swiper-parallax="80" data-swiper-parallax-duration="1500">
-  
-            </h4>
-
-            <figcaption data-swiper-parallax="80" data-swiper-parallax-duration="1250">
-
-            </figcaption>
-
-            <a href="javascript:void(0);" title="Continue Reading" data-swiper-parallax="80" data-swiper-parallax-opacity="0.2" data-swiper-parallax-duration="1750">
-              <a href="registro.html">PARTIDAS</a>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-              </svg>
-            </a>
-
-          </div>
-
-        </figure>
-
-       
-
-       
-
-
-      </div>
-
-      <div class="swiper-scrollbar"></div>
-
-    </section>
-
-  </section>
-
-</article>
-<!-- partial -->
-  <script src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'></script><script  src="./script.js"></script>
-
-</body>
-</html>
+  #FULLNGATT .indicetitlengin {
+      font-size: 10px; /* Smaller button text */
+  }
+}
