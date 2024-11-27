@@ -1,86 +1,274 @@
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
+body {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  color: white;  /* Asegura que el texto en todo el body sea blanco */
+  background-image: url(./img/fondobracket1.png);  /* Ruta de la imagen de fondo */
+  background-size: cover;  /* Asegura que la imagen cubra toda el área visible */
+  background-position: center center;  /* Centra la imagen de fondo */
+  background-attachment: fixed;  /* Fija la imagen al fondo, para que no se mueva con el scroll (opcional) */
+  background-repeat: no-repeat;  /* Evita que la imagen se repita */
+  height: 100px;  /* Asegura que el fondo cubra toda la altura de la pantalla */
+  margin: 0;  /* Elimina el margen predeterminado del body */
 }
 
-.bracket {
-    display: flex;
+#wrapper h1 {
+  font-weight: 700;  /* Negrita para el encabezado */
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #00309a;
+  color: #fff;  /* Blanco para el texto del h1 */
+  padding: 0.75rem 0;
+  margin: 0 0 1rem;
 }
 
-.round {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
+@-webkit-keyframes show-match {
+  0% {
+    opacity: 0;
+    transform: translate(-5rem, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
-.round:first-child .match::before {
-    display: none;
+@keyframes show-match {
+  0% {
+    opacity: 0;
+    transform: translate(-5rem, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
-.round:first-child .match__content::before {
-    display: none;
+.tournament {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-.round:last-child .match::after {
-    display: none;
+.tournament .round {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-.match {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 10px;
-    padding: 6px 0;
-    flex-grow: 1;
-    position: relative;
+.tournament .round .match {
+  width: 12rem;
+  height: 3rem;
+  margin: 0.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  background-color: #00309a;
+  color: #000;
+  transition: background-color 0.3s ease;
+  will-change: transform, opacity;
+  opacity: 0;
+  -webkit-animation-name: show-match;
+  animation-name: show-match;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-direction: normal;
+  animation-direction: normal;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  position: relative;
 }
 
-.match::before {
-    content: "";
-    display: block;
-    min-height: 30px;
-    border-left: 2px solid purple;
-    position: absolute;
-    left: -10px;
-    top: 50%;
-    margin-top: -15px;
-    margin-left: -2px;
+.tournament .round .match:hover {
+  background-color: #e6012a;
 }
 
-.match:nth-child(odd)::after {
-    content: "";
-    display: block;
-    border: 2px solid transparent;
-    border-top-color: purple;
-    border-right-color: purple;
-    height: 50%;
-    position: absolute;
-    right: -10px;
-    width: 10px;
-    top: 50%;
+.tournament .round .match:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 100%;
+  width: 8rem;
+  border-right: 1px solid #e6012a;
 }
 
-.match:nth-child(even)::after {
-    content: "";
-    display: block;
-    border: 2px solid transparent;
-    border-bottom-color: purple;
-    border-right-color: purple;
-    height: 50%;
-    position: absolute;
-    right: -10px;
-    width: 10px;
-    bottom: 50%;
+.tournament .round .match:nth-child(2n-1):after {
+  top: 50%;
+  border-top: 1px solid #e6012a;
+  border-radius: 0 0.5rem 0 0;
 }
 
-.match__content::before {
-    content: "";
-    display: block;
-    width: 10px;
-    border-bottom: 2px solid purple;
-    margin-left: -2px;
-    position: absolute;
-    top: 50%;
-    left: -10px;
+.tournament .round .match:nth-child(2n):after {
+  bottom: 50%;
+  border-bottom: 1px solid #e6012a;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.tournament .round .match .teams {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+.tournament .round .match .teams .team {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.tournament .round .match .teams .team .team-flag {
+  flex: none;
+  padding: 0 0.5rem;
+}
+
+.tournament .round .match .teams .team .team-name,
+.tournament .round .match .teams .team .team-score {
+  color: white;  /* Asegura que los nombres de los equipos y puntajes sean blancos */
+  font-weight: bold;  /* Hace que el texto sea negrita */
+}
+
+.tournament .round .match .teams .team .team-name {
+  flex-basis: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.5rem;
+}
+
+.tournament .round .match .teams .team .team-score {
+  flex: none;
+  color: #fff;
+  width: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.tournament .round:nth-child(1) > .match {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.tournament .round:nth-child(1) > .match:after {
+  height: 0.5rem;
+}
+
+.tournament .round:nth-child(2) > .match {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.tournament .round:nth-child(2) > .match:after {
+  height: 3rem;
+}
+
+.tournament .round:nth-child(3) > .match {
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.tournament .round:nth-child(3) > .match:after {
+  height: 7.5rem;
+}
+
+.tournament .round:nth-child(4) > .match {
+  margin-top: 16.5rem;
+  margin-bottom: 16.5rem;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.tournament .round:nth-child(4) > .match:after {
+  height: 16.5rem;
+}
+
+.tournament .round:nth-child(5) > .match {
+  margin-top: 34.5rem;
+  margin-bottom: 34.5rem;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.tournament .round:nth-child(5) > .match:after {
+  height: 34.5rem;
+}
+
+.tournament .round:nth-child(6) > .match {
+  margin-top: 70.5rem;
+  margin-bottom: 70.5rem;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.tournament .round:nth-child(6) > .match:after {
+  height: 70.5rem;
+}
+
+.tournament .round:nth-child(7) > .match {
+  margin-top: 142.5rem;
+  margin-bottom: 142.5rem;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.tournament .round:nth-child(7) > .match:after {
+  height: 142.5rem;
+}
+
+.tournament .round:nth-child(8) > .match {
+  margin-top: 286.5rem;
+  margin-bottom: 286.5rem;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.tournament .round:nth-child(8) > .match:after {
+  height: 286.5rem;
+}
+
+.tournament .round:nth-child(9) > .match {
+  margin-top: 574.5rem;
+  margin-bottom: 574.5rem;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.tournament .round:nth-child(9) > .match:after {
+  height: 574.5rem;
+}
+
+.tournament .round:last-child > .match:after {
+  display: none;
+}
+
+.tournament .round:first-child > .match:nth-child(2n) {
+  margin-bottom: 1rem;
+}
+
+.tournament .round:first-child > .match:nth-child(2n-1) {
+  margin-top: 1rem;
+}
+
+.flag {
+  display: inline-block;
+  width: 16px;
+  height: 11px;
+  background: url("") no-repeat;
 }
